@@ -12,7 +12,6 @@ namespace Business.ValidationRules.FluentValidation
         {
             //solid kurallarına uymalı
             RuleFor(c => c.BrandId).NotEmpty();
-            RuleFor(c => c.Id).NotEmpty();
             RuleFor(c => c.DailyPrice).GreaterThan(0);
            // RuleFor(c => c).Must(StartWithA);
             

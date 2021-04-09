@@ -16,9 +16,9 @@ namespace DataAccess.Concrete.InMemory
         public InMemoryCarDal()
         {
             _cars = new List<Car> {
-                new Car{Id=1,BrandId=1,ColorId=1,DailyPrice=150,ModelYear="2016",Description="Car 1" },
-                new Car{Id=2,BrandId=2,ColorId=1,DailyPrice=1500,ModelYear="2020",Description="Car 2" },
-                new Car{Id=3,BrandId=3,ColorId=1,DailyPrice=900,ModelYear="2020",Description="Car 3" }
+                new Car{Id=1,BrandId=1,ColorId=1,DailyPrice=150,ModelYear=2016,Description="Car 1" },
+                new Car{Id=2,BrandId=2,ColorId=1,DailyPrice=1500,ModelYear=2020,Description="Car 2" },
+                new Car{Id=3,BrandId=3,ColorId=1,DailyPrice=900,ModelYear=2020,Description="Car 3" }
             };
         }
         public void Add(Car car)
@@ -50,6 +50,11 @@ namespace DataAccess.Concrete.InMemory
         public List<Car> GetById(int Id)
         {
             return _cars.Where(c => c.Id == Id).ToList();
+        }
+
+        public CarDetailDto GetCarDetail(int carId)
+        {
+            throw new NotImplementedException();
         }
 
         public List<CarDetailDto> GetCarDetails()

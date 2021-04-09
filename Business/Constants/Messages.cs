@@ -18,7 +18,7 @@ namespace Business.Constants
         public static string AuthorizationDenied = "yetkiniz yok";
 
         public static string UserRegistered { get; internal set; }
-        public static string SuccessfulLogin { get; internal set; }
+        public static string SuccessfulLogin = "Giriş başarılı";
         public static string UserAlreadyExists { get; internal set; }
         public static string AccessTokenCreated { get; internal set; }
         public static string ImagesAdded { get; internal set; }
@@ -27,5 +27,14 @@ namespace Business.Constants
         public static string ImagesUpdated { get; internal set; }
         public static string MaxError { get; internal set; }
         public static string CarUpdated { get; internal set; }
+        public static string CardExist { get; internal set; }
+        public static string CustomerAdded { get; internal set; }
+        public static string CustomerDeleted { get; internal set; }
+        public static string CustomersListed { get; internal set; }
+        public static string CustomerListed { get; internal set; }
+        public static string CustomerUpdated { get; internal set; }
+        public static string UserAdded { get; internal set; }
+        public static string UserDeleted { get; internal set; }
+        public static string UserUpdated { get; internal set; }
     }
 }

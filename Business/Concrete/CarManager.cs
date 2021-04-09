@@ -28,7 +28,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-        [SecuredOperation("car.add")]
+        //[SecuredOperation("car.add")]
         [ValidationAspect(typeof(CarValidator))]
         [CacheRemoveAspect("ICarService.Get")]
         public IResult Add(Car car)
@@ -104,6 +104,12 @@ namespace Business.Concrete
             _carDal.Update(car);
             _carDal.Add(car);
             return new SuccessResult(Messages.CarUpdated);
+        }
+
+        public IDataResult<CarDetailDto> GetCarDetail(int carId)
+        {
+            return new SuccessDataResult<CarDetailDto>(_carDal.GetCarDetail(carId));
+            
         }
     }
 }

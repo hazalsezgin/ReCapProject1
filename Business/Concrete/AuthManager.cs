@@ -40,7 +40,7 @@ namespace Business.Concrete
 
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
-            var userToCheck = _userService.GetByMail(userForLoginDto.Email);
+            var userToCheck = _userService.GetByMail(userForLoginDto.Email).Data;
             if (userToCheck == null)
             {
                 return new ErrorDataResult<User>(); 
@@ -65,7 +65,7 @@ namespace Business.Concrete
 
         public IDataResult<AccessToken> CreateAccessToken(User user)
         {
-            var claims = _userService.GetClaims(user);
+            var claims = _userService.GetClaims(user).Data;
             var accessToken = _tokenHelper.CreateToken(user, claims);
             return new SuccessDataResult<AccessToken>(accessToken, Messages.AccessTokenCreated);
         }
