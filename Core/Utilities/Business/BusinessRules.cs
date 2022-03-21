@@ -13,7 +13,7 @@ namespace Core.Utilities.Business
             {
                 if (!logic.Success)
                 {
-                    return logic;     // burda diyokki ıresult arrayını gez ordaki her bir logicin successi error se yani başarısızsa logiçi çalıştır demekOKİ yani eğer başarılıysa girmiycek
+                    return logic;     
                 }
             }
             return null; // bu succes başarılıysa çalışcak boş döndür diye
